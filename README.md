@@ -9,7 +9,12 @@ Run From Main.cpp
 Only For Microsoft Windows.
 
 Features:
-1. Raycasting:
-              Ray casting is a rendering technique used in computer graphics and computational geometry. It is capable of creating a three-dimensional perspective in a two-dimensional map.
+1. **Raycasting**:
+                Ray casting is a rendering technique used in computer graphics and computational geometry. It is capable of creating a three-dimensional perspective in a two-dimensional map.
 
 <a href="https://imgflip.com/gif/378h1q"><img src="https://i.imgflip.com/378h1q.gif" title="made at imgflip.com"/></a>
+
+2.**Collision Detection**:
+                 Collision detection is the computational problem of detecting the intersection of two or more objects.
+                 
+ <a href="https://imgflip.com/gif/378i14"><img src="https://i.imgflip.com/378i14.gif" title="made at imgflip.com"/></a>
