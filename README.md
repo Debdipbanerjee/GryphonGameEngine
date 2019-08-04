@@ -20,7 +20,7 @@ Only For Microsoft Windows.
  <a href="https://imgflip.com/gif/378i14"><img src="https://i.imgflip.com/378i14.gif" title="made at imgflip.com"/></a>
  
  3.**Terrain Editor**:
-                    Creates terrain based on your design on Map input.Can be Generated Generally.
+                    Creates terrain based on your design on Map input.Can be Generated Randomly.
    <a href="https://imgflip.com/gif/378iam"><img src="https://i.imgflip.com/378iam.gif" title="made at imgflip.com"/></a>
    
   4.**Shadow casting**  
