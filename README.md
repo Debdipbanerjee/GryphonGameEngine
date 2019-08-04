@@ -8,7 +8,7 @@ Run From Main.cpp
 
 Only For Microsoft Windows.
 
-Features:
+**Features:**
 1. **Raycasting**:
                 Ray casting is a rendering technique used in computer graphics and computational geometry. It is capable of creating a three-dimensional perspective in a two-dimensional map.
 
