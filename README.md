@@ -18,3 +18,7 @@ Features:
                  Collision detection is the computational problem of detecting the intersection of two or more objects.
                  
  <a href="https://imgflip.com/gif/378i14"><img src="https://i.imgflip.com/378i14.gif" title="made at imgflip.com"/></a>
+ 
+ 3.**Terrain Editor**:
+                    Creates terrain based on your design on Map input.Can be Generated Generally.
+   <a href="https://imgflip.com/gif/378iam"><img src="https://i.imgflip.com/378iam.gif" title="made at imgflip.com"/></a>
