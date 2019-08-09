@@ -2,6 +2,12 @@
 // this Game Engine is Inspired by wolfenstein 3D Game Engine(1992) made By John.Carmack
 //used in wolfenstein 3d,Catacomb 3d,Spear of Destiny.
 
+//This I made this game engine by learning from the youtube channel JAVIDX9.The instructor David is an awesome teacher
+//Although I could not get everything he taught but i understand atleast 40% of what he said and I was happy with my progress.
+
+//Update 1.0
+//I will Try to implement Random Map Generation using Maze algorithm.
+
 #include <iostream>
 #include <vector>
 #include <utility>
