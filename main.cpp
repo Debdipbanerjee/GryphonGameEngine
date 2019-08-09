@@ -56,24 +56,22 @@ int main()
 
 	while (1)
 	{
-		// We'll need time differential per frame to calculate modification
-		// to movement speeds, to ensure consistant movement, as ray-tracing
-		// is non-deterministic
+		//time differential per frame to calculate modification to movement speeds, to ensure consistant movement, as ray-tracing is non-deterministic
 		tp2 = chrono::system_clock::now();
 		chrono::duration<float> elapsedTime = tp2 - tp1;
 		tp1 = tp2;
 		float fElapsedTime = elapsedTime.count();
 
 
-		// Handle CCW Rotation
+		// Handle left Rotation
 		if (GetAsyncKeyState((unsigned short)'A') & 0x8000)
 			fPlayerA -= (fSpeed * 0.75f) * fElapsedTime;
 
-		// Handle CW Rotation
+		// Handle right Rotation
 		if (GetAsyncKeyState((unsigned short)'D') & 0x8000)
 			fPlayerA += (fSpeed * 0.75f) * fElapsedTime;
 
-		// Handle Forwards movement & collision
+		// Forwards movement & collision
 		if (GetAsyncKeyState((unsigned short)'W') & 0x8000)
 		{
 			fPlayerX += sinf(fPlayerA) * fSpeed * fElapsedTime;;
@@ -103,17 +101,17 @@ int main()
 			float fRayAngle = (fPlayerA - fFOV / 2.0f) + ((float)x / (float)nScreenWidth) * fFOV;
 
 			// Find distance to wall
-			float fStepSize = 0.1f;		  // Increment size for ray casting, decrease to increase										
-			float fDistanceToWall = 0.0f; //                                      resolution
+			float fStepSize = 0.1f;												
+			float fDistanceToWall = 0.0f; 
 
-			bool bHitWall = false;		// Set when ray hits wall block
-			bool bBoundary = false;		// Set when ray hits boundary between two wall blocks
+			bool bHitWall = false;		
+			bool bBoundary = false;		
 
 			float fEyeX = sinf(fRayAngle); // Unit vector for ray in player space
 			float fEyeY = cosf(fRayAngle);
 
-			// Incrementally cast ray from player, along ray angle, testing for 
-			// intersection with a block
+			
+			
 			while (!bHitWall && fDistanceToWall < fDepth)
 			{
 				fDistanceToWall += fStepSize;
@@ -134,9 +132,8 @@ int main()
 						// Ray has hit wall
 						bHitWall = true;
 
-						// To highlight tile boundaries, cast a ray from each corner
-						// of the tile, to the player. The more coincident this ray
-						// is to the rendering ray, the closer we are to a tile 
+						// To highlight tile boundaries, cast a ray from each corner.
+						// The more coincident this ray is to the rendering ray, the closer we are to a tile 
 						// boundary, which we'll shade to add detail to the walls
 						vector<pair<float, float>> p;
 
@@ -174,8 +171,8 @@ int main()
 			if (fDistanceToWall <= fDepth / 4.0f)			nShade = 0x2588;	// Very close	
 			else if (fDistanceToWall < fDepth / 3.0f)		nShade = 0x2593;
 			else if (fDistanceToWall < fDepth / 2.0f)		nShade = 0x2592;
-			else if (fDistanceToWall < fDepth)				nShade = 0x2591;
-			else											nShade = ' ';		// Too far away
+			else if (fDistanceToWall < fDepth)			nShade = 0x2591;
+			else							nShade = ' ';		// Too away
 
 			if (bBoundary)		nShade = ' '; // Black it out
 
@@ -200,7 +197,7 @@ int main()
 			}
 		}
 
-		// Display Stats
+		// Display
 		swprintf_s(screen, 40, L"X=%3.2f, Y=%3.2f, A=%3.2f FPS=%3.2f ", fPlayerX, fPlayerY, fPlayerA, 1.0f / fElapsedTime);
 
 		// Display Map
